@@ -1,0 +1,6 @@
+/* *{background-color: red;} */
+.navbar-nav .nav-item .nav-link:hover {
+	font-weight: bold;
+	text-decoration: underline;
+  gap: 10;
+}
