@@ -1,6 +1,94 @@
-/* *{background-color: red;} */
+.navbar {
+	background: linear-gradient(to bottom, #7b2cbf, #9d4edd, #6e7d89);
+}
+
+.navbar-nav .nav-item .nav-link {
+	color: white;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* shadow gelap halus */
+	font-size: 1.3rem;
+}
+
 .navbar-nav .nav-item .nav-link:hover {
+	color: yellow;
 	font-weight: bold;
 	text-decoration: underline;
-  gap: 10;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* shadow lebih kuat saat hover */
+	font-size: 1.5rem;
+}
+
+
+/* v2 */
+.carousel-caption h1 {
+	background: linear-gradient(		to right,		rgba(128, 0, 128, 0.3),		rgba(128, 0, 128, 0.6)	);
+	border-radius: 12px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+.container-fluid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 30px 10px;
+}
+
+.container-fluid .custom1-card {
+	background-color: #77bef0;
+	width: 30rem;
+	border-radius: 12px; /* sudut membulat */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* bayangan halus */
+	padding: 1rem; /* opsional, biar isi gak nempel */
+	font-size: 1rem;
+	color: #57564f;
+	margin-right: 10px;
+	margin-left: 10px;
+	/* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); */
+}
+
+.container-fluid .custom1-card:hover {
+	transform: translateY(-5px); /* efek naik sedikit */
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* shadow lebih besar */
+	cursor: pointer; /* pointer saat hover */
+	color: #faf9ee;
+}
+
+.container-fluid .custom2-card {
+	width: 30rem;
+	border-radius: 12px;
+	margin-right: 10px;
+	margin-left: 10px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+.container-fluid .custom2-card img {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-fluid .custom2-card img:hover {
+  transform: scale(1.05); /* zoom in sedikit */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* bayangan halus */
+  cursor: pointer;
+}
+
+.footer {
+	background-color: #113f67;
+	height: 4rem;
+	display: flex;
+	justify-content: center; /* untuk horizontal center */
+	align-items: center; /* untuk vertical center */
+}
+
+.footer .text-footer {
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }

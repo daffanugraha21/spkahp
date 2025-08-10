@@ -7,7 +7,7 @@
 </head>
 <body>
   <!-- Navbar section -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">Lepkom</a> -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,19 +19,19 @@
             <a class="nav-link active" aria-current="page" href="<?= site_url('beranda') ?>">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= site_url('pilihankursus') ?>">Pilihan Kursus</a>
+            <a class="nav-link" aria-current="page" href="<?= site_url('pilihankursus') ?>">Pilihan Kursus</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= site_url('galeri') ?>">Galeri</a>
+            <a class="nav-link" aria-current="page" href="<?= site_url('galeri') ?>">Galeri</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= site_url('kontak') ?>">Kontak</a>
+            <a class="nav-link" aria-current="page" href="<?= site_url('kontak') ?>">Kontak</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= site_url('auth/login') ?>">Login</a>
+            <a class="nav-link" aria-current="page" href="<?= site_url('auth/login') ?>">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= site_url('auth/register') ?>">Register</a>
+            <a class="nav-link" aria-current="page" href="<?= site_url('auth/register') ?>">Register</a>
           </li>
         </ul>
       </div>
@@ -76,12 +76,27 @@
   </div>
   <!-- End Carousel -->
 
-    <h1>Selamat Datang di Sistem SPK Pemilihan Kursus</h1>
-    <p>Silakan login jika sudah punya akun, atau daftar jika belum.</p>
+  <!-- Start Welcome -->
+   <div class="container-fluid">
+    <div class="card custom1-card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Selamat Datang Di Situs Pemilihan Materi Kursus VM Lepkom Berbasis Metode AHP</h5>
+        <p class="card-text">Situs Pemilihan Kursus dengan metode AHP adalah sebuah website yang menampilkan Kursus yang paling sesuai dengan minat dan kemampuan mahasiswa</p>
+      </div>
+    </div>
 
-    <a href="<?= site_url('auth/login') ?>">Login</a> | 
-    <a href="<?= site_url('auth/register') ?>">Register</a>
-    
+    <div class="card custom2-card">
+      <img src="<?= base_url('assets/images/front/study1.jpg') ?>" class="card-img-top" alt="study">
+    </div>
+   </div>
+  <!-- End Welcome -->
+
+  <!-- Start Footer -->
+   <footer class="footer">
+    <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+   </footer>
+  <!-- End Footer -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
