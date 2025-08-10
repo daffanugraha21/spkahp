@@ -76,30 +76,45 @@
   </div>
   <!-- End Carousel -->
 
-  <!-- Start Card-login -->
-   <div class="container d-flex justify-content-center align-items-center">
-    <div class="card" style="width: 18rem;">
-    <div class="card-header">
+  <!-- Start Card-Register -->
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card custom-register-card">
+      <div class="card-header text-center fw-bold fs-4">
         Registrasi
-    </div>
-    <ul class="list-group list-group-flush">
+      </div>
+      <div class="card-body">
         <?php if($this->session->flashdata('success')): ?>
-            <p style="color:green"><?= $this->session->flashdata('success') ?></p>
+          <p class="text-success text-center"><?= $this->session->flashdata('success') ?></p>
         <?php endif; ?>
-        
+
         <?= form_open('auth/register') ?>
-            <input type="text" name="npm" placeholder="NPM" required><br>
-            <input type="text" name="nama" placeholder="Nama Lengkap" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
-            <input type="text" name="jurusan" placeholder="Jurusan" required><br>
-            <input type="text" name="fakultas" placeholder="Fakultas" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <button type="submit">Register</button>
-        <?= form_open() ?>
-    </ul>
+          <div class="mb-3">
+            <input type="text" name="npm" class="form-control" placeholder="NPM" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control" placeholder="Email" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" name="jurusan" class="form-control" placeholder="Jurusan" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" name="fakultas" class="form-control" placeholder="Fakultas" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Register</button>
+          </div>
+        <?= form_close() ?>
+      </div>
     </div>
-   </div>
-  <!-- End Card-login -->
+  </div>
+
+  <!-- End Card-Register -->
 <!-- Base -->
     <!-- <h2>Registrasi</h2>
 

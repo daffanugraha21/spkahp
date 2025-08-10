@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/custom.css') ?>">
   <title>Kontak</title>
 </head>
@@ -77,17 +78,41 @@
     </button>
   </div>
   <!-- End Carousel -->
+      <div class="title">
+        <h1>Kontak Lepkom</h1>
+      </div>
+    <!-- Start Kontak -->
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-5 col-sm-6 mb-4 d-flex">
+          <div class="card custom4-card w-100">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-geo-alt"></i> Alamat<br><span>Jl. Raya Jakarta-Bogor No.20, Cisalak Ps., Kec. Cimanggis, Kota Depok, Jawa Barat</span></li>
+              <li class="list-group-item"><i class="bi bi-telephone"></i> Telepon<br><span>0877-6151-5199</span></li>
+              <li class="list-group-item"><i class="bi bi-envelope"></i> Email<br><span>vmlepkom@mail.com</span></li>
+            </ul>
+          </div>
+        </div>
 
-    <h1>Selamat Datang di Sistem SPK Pemilihan Kursus</h1>
-    <p>Silakan login jika sudah punya akun, atau daftar jika belum.</p>
+        <div class="col-md-5 col-sm-6 mb-4 d-flex">
+          <div class="card custom4-card w-100">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><i class="bi bi-instagram"></i> Instagram<br><span>@vm_lepkomgunadarma</span></li>
+              <li class="list-group-item"><i class="bi bi-linkedin"></i> Linkedin<br><span>vmlepkom</span></li>
+              <li class="list-group-item"><i class="bi bi-chat"></i> Live Chat<br><span><a href="https://vm.lepkom.gunadarma.ac.id/" style="text-decoration:none">vm.lepkom.gunadarma.ac.id</a></span></li>
+            </ul>
+          </div>
+        </div>
 
-    <a href="<?= site_url('auth/login') ?>">Login</a> | 
-    <a href="<?= site_url('auth/register') ?>">Register</a>
-    
+      </div>
+    </div>
+    <!-- End Kontak -->
+    <!-- Start Footer -->
+      <footer class="footer">
+        <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+      </footer>
+    <!-- End Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <h1>kontak</h1>
-  <p><a href="<?= site_url('beranda') ?>">Kembali ke Beranda</a></p>
 </body>
 </html>

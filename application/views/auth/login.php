@@ -77,25 +77,31 @@
   <!-- End Carousel -->
 
   <!-- Start Card-login -->
-   <div class="container d-flex justify-content-center align-items-center">
-    <div class="card" style="width: 18rem;">
-    <div class="card-header">
+   <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card custom-login-card">
+      <div class="card-header text-center fw-bold fs-4">
         LOGIN
+      </div>
+      <div class="card-body">
+        <?php if($this->session->flashdata('error')): ?>
+          <p class="text-danger text-center"><?= $this->session->flashdata('error') ?></p>
+        <?php endif; ?>
+        
+        <?= form_open('auth/login') ?>
+          <div class="mb-3">
+            <input type="text" name="npm" class="form-control" placeholder="NPM" required>
+          </div>
+          <div class="mb-3">
+            <input type="password" name="password" class="form-control" placeholder="Password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Login</button>
+          </div>
+        <?= form_close() ?>
+      </div>
     </div>
-        <div class="">
-            <ul class="list-group list-group-flush">
-            <?php if($this->session->flashdata('error')): ?>
-                <p style="color:red"><?= $this->session->flashdata('error') ?></p>
-            <?php endif; ?>
-            <?= form_open('auth/login') ?>
-                <input type="text" name="npm" placeholder="NPM" required><br>
-                <input type="password" name="password" placeholder="Password" required><br>
-                <button type="submit">Login</button>
-            <?= form_close() ?>
-            </ul>
-        </div>
-    </div>
-   </div>
+  </div>
+
     
   <!-- End Card-login -->
 <!-- Base -->

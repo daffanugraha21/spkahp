@@ -78,15 +78,62 @@
   </div>
   <!-- End Carousel -->
 
-    <h1>Selamat Datang di Sistem SPK Pemilihan Kursus</h1>
-    <p>Silakan login jika sudah punya akun, atau daftar jika belum.</p>
+    <!-- Start Pilihan kursus -->
+     <div class="title">
+        <h1>Pilihan Kursus Lepkom</h1>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkSqlserver.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkGolang.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkJava.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkCisco.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkOracle.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkC.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkNav.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/pkLinux.png') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End Pilihan kursus -->
 
-    <a href="<?= site_url('auth/login') ?>">Login</a> | 
-    <a href="<?= site_url('auth/register') ?>">Register</a>
-    
+    <!-- Start Footer -->
+      <footer class="footer">
+        <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+      </footer>
+    <!-- End Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <h1>pilihan kursus</h1>
-  <p><a href="<?= site_url('beranda') ?>">Kembali ke Beranda</a></p>
 </body>
 </html>

@@ -78,17 +78,61 @@
   </div>
   <!-- End Carousel -->
 
-    <h1>Selamat Datang di Sistem SPK Pemilihan Kursus</h1>
-    <p>Silakan login jika sudah punya akun, atau daftar jika belum.</p>
-
-    <a href="<?= site_url('auth/login') ?>">Login</a> | 
-    <a href="<?= site_url('auth/register') ?>">Register</a>
-    
+    <!-- Start Galeri -->
+      <div class="title">
+        <h1>Galeri Lepkom</h1>
+      </div>
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/30.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/33.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/34.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/38.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/36.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/29.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/32.jpeg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card custom3-card">
+              <img src="<?= base_url('assets/images/37.jpg') ?>" class="card-img-top" alt="study">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- End Galeri kursus -->
+    <!-- Start Footer -->
+      <footer class="footer">
+        <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+      </footer>
+    <!-- End Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-  <h1>galeri</h1>
-  <p><a href="<?= site_url('beranda') ?>">Kembali ke Beranda</a></p>
 </body>
 </html>

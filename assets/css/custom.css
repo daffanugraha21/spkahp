@@ -16,10 +16,13 @@
 	font-size: 1.5rem;
 }
 
-
 /* v2 */
 .carousel-caption h1 {
-	background: linear-gradient(		to right,		rgba(128, 0, 128, 0.3),		rgba(128, 0, 128, 0.6)	);
+	background: linear-gradient(
+		to right,
+		rgba(128, 0, 128, 0.3),
+		rgba(128, 0, 128, 0.6)
+	);
 	border-radius: 12px;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 	color: white;
@@ -70,14 +73,176 @@
 }
 
 .container-fluid .custom2-card img {
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border-radius: 12px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .container-fluid .custom2-card img:hover {
-  transform: scale(1.05); /* zoom in sedikit */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* bayangan halus */
-  cursor: pointer;
+	transform: scale(1.05); /* zoom in sedikit */
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* bayangan halus */
+	cursor: pointer;
+}
+
+/* custom3-card */
+.container-fluid .custom3-card {
+	background-color: #77bef0;
+	border-radius: 12px;
+	padding: 5px; /* kasih space buat background terlihat */
+	transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container-fluid .custom3-card:hover {
+	background-color: #5a9ad9; /* sedikit lebih gelap saat hover */
+	box-shadow: 0 8px 25px rgba(119, 190, 240, 0.6);
+	cursor: pointer;
+}
+
+.container-fluid .custom3-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 10px; /* dikurangi sedikit supaya ada jarak dari background */
+	border: 1px solid rgba(0, 0, 0, 0.1);
+
+	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.container-fluid .custom3-card img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+	border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* custom4-card */
+.container-fluid .custom4-card {
+	background: whitesmoke;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	padding: 1rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 3px solid #5fb0e8;
+
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.container-fluid .custom4-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.container-fluid .custom4-card .list-group-item {
+	border: none;
+	font-size: 1rem;
+	background-color: transparent;
+	padding: 0.75rem 1rem;
+	transition: background-color 0.3s ease;
+}
+
+.container-fluid .custom4-card .list-group-item:hover {
+	/* background-color: rgba(119, 190, 240, 0.1); */
+	background-color: #77bef0;
+	border-radius: 8px;
+}
+
+.container-fluid .custom4-card i {
+	color: #7b2cbf;
+	font-size: 1.3rem;
+	margin-right: 0.5rem;
+}
+
+.container-fluid .custom4-card span {
+	display: block;
+	color: #333;
+	font-weight: 500;
+	margin-top: 0.25rem;
+}
+
+.container-fluid .custom4-card a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.container-fluid .custom4-card a:hover {
+	text-decoration: underline;
+}
+
+.title {
+	text-align: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.title h1 {
+	display: inline-block;
+	padding: 0.6rem 1.5rem;
+	background: linear-gradient(45deg, #7b2cbf, #9d4edd);
+	color: white;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 500;
+	font-size: 2.5rem;
+	border-radius: 15px;
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 12px rgba(125, 44, 191, 0.4);
+	transition: transform 0.3s ease;
+	cursor: default;
+}
+
+.title h1:hover {
+	transform: scale(1.05);
+	box-shadow: 0 6px 20px rgba(125, 44, 191, 0.6);
+}
+
+/* Login */
+.custom-login-card {
+  width: 22rem;
+  background-color: #77bef0;
+  border: 1px solid #5fb0e8;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-login-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-login-card .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.custom-login-card .btn {
+  border-radius: 8px;
+}
+
+/* Register */
+.custom-register-card {
+  width: 28rem;
+  background-color: #77bef0;
+  border: 1px solid #5fb0e8;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-register-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-register-card .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.custom-register-card .btn {
+  border-radius: 8px;
 }
 
 .footer {
