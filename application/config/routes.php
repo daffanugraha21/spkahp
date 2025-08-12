@@ -52,3 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'beranda'; // Halaman awal
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// $route['beranda/admin/login'] = 'admin/login';
+// $route['beranda/admin/do_login'] = 'admin/do_login';
+// $route['beranda/admin/dashboard'] = 'admin/dashboard';
+// $route['beranda/admin/logout'] = 'admin/logout';

@@ -101,9 +101,13 @@
       </div>
     </div>
   </div>
-
     
   <!-- End Card-login -->
+  <!-- Start Footer -->
+    <footer class="footer">
+      <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+    </footer>
+  <!-- End Footer -->
 <!-- Base -->
     <!-- <h2>Login</h2>
 

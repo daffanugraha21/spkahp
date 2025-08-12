@@ -115,6 +115,11 @@
   </div>
 
   <!-- End Card-Register -->
+  <!-- Start Footer -->
+   <footer class="footer">
+    <h5 class="text-footer">Universitas Gunadarma | Lepkom</h5>
+   </footer>
+  <!-- End Footer -->
 <!-- Base -->
     <!-- <h2>Registrasi</h2>
 
