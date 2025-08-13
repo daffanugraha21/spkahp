@@ -15,6 +15,8 @@ class Home extends CI_Controller {
 
     // Fungsi untuk menampilkan halaman utama setelah login
     public function index() {
+        $data['title'] = 'Dashboard Admin';
+        $this->load->view('template-mahasiswa/header', $data);
         $this->load->view('home');
     }
 }

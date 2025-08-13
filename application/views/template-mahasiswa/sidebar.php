@@ -1,7 +1,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <a href="#" class="brand-link">
-    <span class="brand-text font-weight-light">AdminLTE</span>
+    <span class="brand-text font-weight-light">Universitas Gunadarma</span>
   </a>
   <div class="sidebar">
     <!-- Sidebar Menu -->
@@ -14,9 +14,21 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= site_url('home'); ?>" class="nav-link">
+          <a href="<?= site_url('profile'); ?>" class="nav-link">
             <i class="nav-icon fas fa-user"></i>
-            <p>Data Mahasiswa</p>
+            <p>Profile</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('kuesioner'); ?>" class="nav-link">
+            <i class="nav-icon fas fa-file"></i>
+            <p>Kuesioner</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= site_url('hasil'); ?>" class="nav-link">
+            <i class="nav-icon fas fa-clipboard-check"></i>
+            <p>Hasil</p>
           </a>
         </li>
         <li class="nav-item">
