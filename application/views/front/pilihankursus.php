@@ -84,42 +84,28 @@
       </div>
       <div class="container-fluid">
         <div class="row justify-content-center">
-          <div class="col-md-3 col-sm-6 mb-4">
+          <div class="col-md-4 col-sm-6 mb-4">
             <div class="card custom3-card">
               <img src="<?= base_url('assets/images/pkSqlserver.png') ?>" class="card-img-top" alt="study">
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card custom3-card">
-              <img src="<?= base_url('assets/images/pkGolang.png') ?>" class="card-img-top" alt="study">
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
+          <div class="col-md-4 col-sm-6 mb-4">
             <div class="card custom3-card">
               <img src="<?= base_url('assets/images/pkJava.png') ?>" class="card-img-top" alt="study">
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
+          <div class="col-md-4 col-sm-6 mb-4">
             <div class="card custom3-card">
               <img src="<?= base_url('assets/images/pkCisco.png') ?>" class="card-img-top" alt="study">
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card custom3-card">
-              <img src="<?= base_url('assets/images/pkOracle.png') ?>" class="card-img-top" alt="study">
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
+          <div class="col-md-4 col-sm-6 mb-4">
             <div class="card custom3-card">
               <img src="<?= base_url('assets/images/pkC.png') ?>" class="card-img-top" alt="study">
             </div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card custom3-card">
-              <img src="<?= base_url('assets/images/pkNav.png') ?>" class="card-img-top" alt="study">
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
+          
+          <div class="col-md-4 col-sm-6 mb-4">
             <div class="card custom3-card">
               <img src="<?= base_url('assets/images/pkLinux.png') ?>" class="card-img-top" alt="study">
             </div>

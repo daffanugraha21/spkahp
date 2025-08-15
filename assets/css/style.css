@@ -1,0 +1,76 @@
+.content-wrapper .content-header .judul-halaman {
+	text-align: center;
+}
+
+.card-body {
+	background-color: #f8f9fa;
+}
+
+.table {
+	border-collapse: separate; /* wajib untuk border-spacing berfungsi */
+	border-spacing: 0 10px; /* jarak horizontal 0, jarak vertikal 10px */
+}
+
+.table th,
+.table td {
+	border-bottom: 1px solid #ccc; /* garis pemisah antar baris */
+	padding: 12px;
+}
+
+.table th {
+	width: 150px;
+	background-color: #725cad;
+	color: white;
+	border-right: 1px solid #ccc;
+	border-radius: 8px 0 0 8px; /* bulat kiri */
+}
+
+.table td {
+	background-color: #ecf0f1;
+	border-radius: 0 8px 8px 0; /* bulat kanan */
+}
+
+/* Home */
+.custom-card-home {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.custom-card-home .card {
+	width: 90%;
+}
+
+.custom-card-home p {
+	text-align: justify; /* Rata kiri dan kanan */
+	text-indent: 30px; /* Awalan paragraf menjorok */
+	line-height: 1.6; /* Jarak antar baris */
+	margin-bottom: 15px; /* Jarak antar paragraf (kalau lebih dari satu) */
+	color: #333; /* Warna teks agar lebih lembut dari hitam pekat */
+	font-size: 16px; /* Ukuran teks nyaman dibaca */
+}
+
+/* Tombol logout sidebar */
+.logout-item {
+  margin-top: 20px;
+}
+
+.logout-link {
+  background-color: #dc3545; /* Bootstrap red */
+  color: white !important;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+}
+
+.logout-link:hover {
+  background-color: #c82333; /* Darker red */
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Kuesioner */
+/* .content .container-fluid .kuesioner {
+  background-color: red;
+} */

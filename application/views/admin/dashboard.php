@@ -14,13 +14,25 @@
 <?php $this->load->view('template/sidebar'); ?>
 
 <!-- Content Wrapper -->
-<div class="content-wrapper">
+<!-- <div class="content-wrapper">
   <div class="content-header">
     <h1 class="m-0 text-dark">Dashboard Admin</h1>
   </div>
   <div class="content">
     <p>Selamat datang, Admin!</p>
   </div>
-</div>
+</div> -->
 
+<!-- V2 -->
+ <div class="content-wrapper p-4">
+  <div class="container">
+    <h1 class="text-center mb-4">Dashboard Admin</h1>
+    
+    <div class="card">
+      <div class="card-body">
+        <p>Selamat datang di dashboard admin.</p>
+      </div>
+    </div>
+  </div>
+</div>
 <?php $this->load->view('template/footer'); ?>
