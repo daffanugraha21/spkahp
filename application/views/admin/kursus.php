@@ -16,7 +16,7 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>No</th>
             <th>Nama Kursus</th>
             <th>Deskripsi</th>
             <th>Tujuan</th>
@@ -29,9 +29,9 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($kursus as $k): ?>
+          <?php $no = 1; foreach ($kursus as $k): ?>
           <tr>
-            <td><?= $k->id_kursus ?></td>
+            <td><?= $no++ ?></td>
             <td><?= htmlspecialchars($k->nama_kursus) ?></td>
             <td><?= nl2br(htmlspecialchars($k->deskripsi)) ?></td>
             <td><?= nl2br(htmlspecialchars($k->tujuan)) ?></td>
@@ -43,10 +43,11 @@
             <td>
               <a href="<?= site_url('kursus/edit/' . $k->id_kursus) ?>" class="btn btn-warning btn-sm">Edit</a>
               <a href="<?= site_url('kursus/hapus/' . $k->id_kursus) ?>" 
-                 onclick="return confirm('Yakin ingin menghapus kursus ini?');" 
-                 class="btn btn-danger btn-sm">Hapus</a>
+                onclick="return confirm('Yakin ingin menghapus kursus ini?');" 
+                class="btn btn-danger btn-sm">Hapus</a>
             </td>
           </tr>
+
           <?php endforeach; ?>
         </tbody>
       </table>

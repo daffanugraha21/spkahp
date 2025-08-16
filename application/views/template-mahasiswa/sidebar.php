@@ -1,6 +1,6 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-  <a href="#" class="brand-link">
+  <a href="<?= site_url('home'); ?>" class="brand-link" style="text-decoration: none;">
     <span class="brand-text font-weight-light">Universitas Gunadarma</span>
   </a>
   <div class="sidebar">

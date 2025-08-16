@@ -9,3 +9,16 @@ body {
 .card {
 	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
+
+/* Dashboard */
+.dashboard-cards {
+  display: flex;
+  gap: 20px; /* Jarak antar card */
+  flex-wrap: wrap; /* Biar responsif kalau layar kecil */
+  margin-top: 20px;
+}
+
+.card-dashboard {
+  width: 18rem; /* Atau bisa pakai persentase biar lebih fleksibel */
+  flex: 0 0 auto; /* Supaya ukurannya tidak berubah saat flex */
+}
