@@ -4,12 +4,34 @@
 <!-- Mulai Konten Utama -->
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>Kriteria</h1>
+    <h1>Data Kriteria</h1>
   </section>
 
   <section class="content">
     <div class="container-fluid">
-      <p>Ini halaman kriteria kamu.</p>
+      <a href="<?= site_url('kriteria/tambah_kriteria'); ?>" class="btn btn-primary mb-3">Tambah Kriteria</a>
+
+      <table class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nama Kriteria</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($kriteria as $k): ?>
+            <tr>
+              <td><?= $k->id_kriteria; ?></td>
+              <td><?= $k->nama_kriteria; ?></td>
+              <td>
+                <a href="<?= site_url('kriteria/edit_kriteria/' . $k->id_kriteria); ?>" class="btn btn-warning btn-sm">Edit</a>
+                <a href="<?= site_url('kriteria/delete/' . $k->id_kriteria); ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
     </div>
   </section>
 </div>
