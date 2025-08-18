@@ -123,28 +123,28 @@
     <div class="info-cards">
   <div class="card card-info">
     <div class="card-body">
-      <h1>1</h1>
+      <h1>100</h1>
       <p class="card-text">Jumlah Users</p>
     </div>
   </div>
 
   <div class="card card-info">
     <div class="card-body">
-      <h1>1</h1>
+      <h1>5</h1>
       <p class="card-text">Jumlah Kriteria</p>
     </div>
   </div>
 
   <div class="card card-info">
     <div class="card-body">
-      <h1>1</h1>
+      <h1>5</h1>
       <p class="card-text">Jumlah Kursus</p>
     </div>
   </div>
 
   <div class="card card-info">
     <div class="card-body">
-      <h1>1</h1>
+      <h1>0</h1>
       <p class="card-text">Jumlah Pengunjung</p>
     </div>
   </div>

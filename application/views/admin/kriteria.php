@@ -14,15 +14,15 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>No</th>
             <th>Nama Kriteria</th>
             <th>Aksi</th>
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($kriteria as $k): ?>
+          <?php $no = 1; foreach ($kriteria as $k): ?>
             <tr>
-              <td><?= $k->id_kriteria; ?></td>
+              <td><?= $no++ ?></td>
               <td><?= $k->nama_kriteria; ?></td>
               <td>
                 <a href="<?= site_url('kriteria/edit_kriteria/' . $k->id_kriteria); ?>" class="btn btn-warning btn-sm">Edit</a>
