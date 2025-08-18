@@ -22,7 +22,8 @@
           <h3 class="card-title">Tambah Opsi</h3>
         </div>
         <div class="card-body">
-          <form method="post">
+          <!-- Arahkan action ke controller Opsi -->
+          <form action="<?= site_url('opsi/tambah/' . $soal->id_soal) ?>" method="post">
             <div class="form-group">
               <label for="teks_opsi">Teks Opsi</label>
               <input type="text" name="teks_opsi" id="teks_opsi" class="form-control" required>
@@ -60,7 +61,8 @@
                   <td><?= $o->teks_opsi ?></td>
                   <td class="text-center"><?= $o->nilai ?></td>
                   <td class="text-center">
-                    <a href="<?= site_url('soalkuesioner/hapus_opsi/'.$o->id_opsi.'/'.$soal->soal_id) ?>" 
+                    <!-- Arahkan hapus ke controller Opsi -->
+                    <a href="<?= site_url('opsi/hapus/' . $o->id_opsi . '/' . $soal->id_soal) ?>"
                        class="btn btn-danger btn-sm"
                        onclick="return confirm('Yakin hapus opsi ini?')">
                       <i class="fa fa-trash"></i> Hapus

@@ -8,13 +8,17 @@ class Opsi_model extends CI_Model {
         return $this->db->get_where('opsi', ['soal_id' => $soal_id])->result();
     }
 
+    // Ambil 1 opsi berdasarkan id_opsi
+    public function get_by_id($id_opsi) {
+        return $this->db->get_where('opsi', ['id_opsi' => $id_opsi])->row();
+    }
+
     // Tambah opsi baru
     public function insert_opsi($data) {
-        return $this->db->insert('opsi', $data);
-         if ($this->db->affected_rows() > 0) {
+        if ($this->db->insert('opsi', $data)) {
             return true;
         } else {
-            log_message('error', 'Insert opsi gagal: ' . $this->db->last_query());
+            log_message('error', 'Gagal insert opsi: ' . $this->db->last_query());
             return false;
         }
     }
