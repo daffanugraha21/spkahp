@@ -14,7 +14,7 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
-            <th>ID</th>
+            <th>No</th>
             <th>Nama Subkriteria</th>
             <th>Kriteria</th>
             <th>Tipe</th>
@@ -25,9 +25,9 @@
           </tr>
         </thead>
         <tbody>
-          <?php foreach ($subkriteria as $s): ?>
+          <?php $no = 1; foreach ($subkriteria as $s): ?>
             <tr>
-              <td><?= $s->id_subkriteria; ?></td>
+              <td><?= $s->$no++ ?></td>
               <td><?= $s->nama_subkriteria; ?></td>
               <td><?= $s->nama_kriteria; ?></td>
               <td><?= $s->tipe; ?></td>

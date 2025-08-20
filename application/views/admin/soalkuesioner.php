@@ -1,5 +1,6 @@
 <?php $this->load->view('template/header'); ?>
 <?php $this->load->view('template/sidebar'); ?>
+
 <!-- <?php if($this->session->flashdata('success')): ?>
     <div class="alert alert-success">
         <?= $this->session->flashdata('success'); ?>
@@ -29,7 +30,7 @@
         </thead>
         <tbody>
           <?php if (!empty($soal)) : ?>
-            <?php $no = 1; foreach ($soal as $s): ?>
+            <?php $no = 1 + $this->uri->segment(3, 0); foreach ($soal as $s): ?>
               <tr>
                 <td><?= $no++ ?></td>
                 <td><?= $s->pertanyaan ?></td>
@@ -47,6 +48,11 @@
           <?php endif; ?>
         </tbody>
       </table>
+
+      <!-- Tampilkan Pagination -->
+      <div class="mt-3">
+        <?= $pagination ?>
+      </div>
 
     </div>
   </section>

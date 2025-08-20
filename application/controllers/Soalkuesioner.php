@@ -10,13 +10,42 @@ class Soalkuesioner extends CI_Controller {
         $this->load->model('Opsi_model'); // model opsi
         $this->load->helper(array('url','form'));
         $this->load->library('session'); // buat flashdata
+        $this->load->library('pagination'); // tambahkan library pagination
     }
 
-    // Halaman utama daftar soal
-    public function index() {
+    // Halaman utama daftar soal (pakai pagination)
+    public function index()
+    {
         $data['title'] = 'Soal Kuesioner';
-        $data['soal']  = $this->Soal_model->get_all_soal();
 
+        // Konfigurasi pagination
+        $config['base_url'] = site_url('soalkuesioner/index');
+        $config['total_rows'] = $this->Soal_model->count_all_soal();
+        $config['per_page'] = 4;
+        $config['uri_segment'] = 3;
+
+        // Styling pagination (Bootstrap 4/5)
+        $config['full_tag_open'] = '<ul class="pagination">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_link'] = 'First';
+        $config['last_link'] = 'Last';
+        $config['next_link'] = '&raquo;';
+        $config['prev_link'] = '&laquo;';
+        $config['cur_tag_open'] = '<li class="page-item active"><a class="page-link" href="#">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li class="page-item">';
+        $config['num_tag_close'] = '</li>';
+        $config['attributes'] = ['class' => 'page-link'];
+
+        // Inisialisasi pagination
+        $this->pagination->initialize($config);
+
+        // Ambil data soal sesuai halaman
+        $start = $this->uri->segment(3, 0);
+        $data['soal'] = $this->Soal_model->get_soal_pagination($config['per_page'], $start);
+        $data['pagination'] = $this->pagination->create_links();
+
+        // Load view
         $this->load->view('template/header', $data);
         $this->load->view('template/sidebar');
         $this->load->view('admin/soalkuesioner', $data); 
