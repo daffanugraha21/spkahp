@@ -41,4 +41,17 @@ class Soal_model extends CI_Model {
     {
         return $this->db->limit($limit, $start)->get('soal')->result();
     }
+
+    public function get_soal_dan_opsi() {
+        $this->db->order_by('id_soal', 'ASC');
+        $soal_data = $this->db->get('soal')->result();
+
+        foreach ($soal_data as $soal) {
+            $this->db->where('soal_id', $soal->id_soal);
+            $this->db->order_by('id_opsi', 'ASC');
+            $soal->opsi = $this->db->get('opsi')->result(); // properti opsi sebagai array objek
+        }
+
+        return $soal_data; // array objek dengan nested opsi
+    }
 }

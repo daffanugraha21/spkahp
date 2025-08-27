@@ -48,7 +48,7 @@
         <li class="nav-item">
           <a href="<?= site_url('kursus'); ?>" class="nav-link">
             <i class="nav-icon fas fa-keyboard"></i>
-            <p>Kursus</p>
+            <p>Kursus (Alternatif)</p>
           </a>
         </li>
         <li class="nav-item">

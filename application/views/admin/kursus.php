@@ -4,7 +4,7 @@
 <!-- Mulai Konten Utama -->
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>Kursus</h1>
+    <h1>Kursus (Alternatif)</h1>
   </section>
 
   <section class="content">
@@ -20,11 +20,11 @@
             <th>Nama Kursus</th>
             <th>Deskripsi</th>
             <th>Tujuan</th>
-            <th>Metode</th>
-            <th>Kontak</th>
-            <th>Jumlah Pemilih</th>
-            <th>Skor AHP</th>
-            <th>Peringkat</th>
+            <!-- <th>Metode</th> -->
+            <!-- <th>Kontak</th> -->
+            <!-- <th>Jumlah Pemilih</th> -->
+            <!-- <th>Skor AHP</th> -->
+            <!-- <th>Peringkat</th> -->
             <th>Aksi</th>
           </tr>
         </thead>
@@ -35,11 +35,11 @@
             <td><?= htmlspecialchars($k->nama_kursus) ?></td>
             <td><?= nl2br(htmlspecialchars($k->deskripsi)) ?></td>
             <td><?= nl2br(htmlspecialchars($k->tujuan)) ?></td>
-            <td><?= nl2br(htmlspecialchars($k->metode)) ?></td>
-            <td><?= htmlspecialchars($k->kontak) ?></td>
-            <td><?= (int)$k->jumlah_pemilih ?></td>
-            <td><?= number_format($k->skor_ahp, 6) ?></td>
-            <td><?= (int)$k->peringkat ?></td>
+            <!-- <td><?= nl2br(htmlspecialchars($k->metode)) ?></td> -->
+            <!-- <td><?= htmlspecialchars($k->kontak) ?></td> -->
+            <!-- <td><?= (int)$k->jumlah_pemilih ?></td> -->
+            <!-- <td><?= number_format($k->skor_ahp, 6) ?></td> -->
+            <!-- <td><?= (int)$k->peringkat ?></td> -->
             <td>
               <a href="<?= site_url('kursus/edit/' . $k->id_kursus) ?>" class="btn btn-warning btn-sm">Edit</a>
               <a href="<?= site_url('kursus/hapus/' . $k->id_kursus) ?>" 

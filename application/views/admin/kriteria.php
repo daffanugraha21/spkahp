@@ -4,7 +4,7 @@
 <!-- Mulai Konten Utama -->
 <div class="content-wrapper">
   <section class="content-header">
-    <h1>Data Kriteria</h1>
+    <h1>Kriteria</h1>
   </section>
 
   <section class="content">
