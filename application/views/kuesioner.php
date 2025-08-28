@@ -15,8 +15,12 @@
 
   <section class="content">
     <div class="container-fluid">
+      <!-- Flash message sukses -->
       <?php if ($this->session->flashdata('success')) : ?>
         <div class="alert alert-success"><?= $this->session->flashdata('success'); ?></div>
+      <!-- Flash message error -->
+      <?php elseif ($this->session->flashdata('error')) : ?>
+        <div class="alert alert-danger"><?= $this->session->flashdata('error'); ?></div>
       <?php endif; ?>
 
       <p class="kuesioner">Silakan isi kuesioner di bawah ini:</p>
@@ -25,6 +29,7 @@
         <form action="<?= base_url('index.php/kuesioner/submit') ?>" method="post">
           <?php foreach ($soal as $index => $s) : ?>
             <div class="mb-4 p-3 border rounded bg-light">
+              <!-- Pertanyaan -->
               <label class="fw-bold"><?= ($index + 1) . ". " . htmlentities($s->pertanyaan); ?></label>
               
               <?php if (!empty($s->opsi)) : ?>
@@ -34,9 +39,9 @@
                       class="form-check-input" 
                       type="radio" 
                       name="jawaban[<?= $s->id_soal ?>]" 
-                      value="<?= $opsi->nilai ?>" 
+                      value="<?= $opsi->id_opsi ?>" 
+                      id="opsi_<?= $opsi->id_opsi ?>" 
                       required
-                      id="opsi_<?= $opsi->id_opsi ?>"
                     >
                     <label class="form-check-label" for="opsi_<?= $opsi->id_opsi ?>">
                       <?= htmlentities($opsi->teks_opsi) ?>

@@ -10,7 +10,6 @@ class Kuesioner extends CI_Controller {
 
     public function index() {
         $data['title'] = 'Kuesioner';
-        // Ambil soal beserta opsi (pastikan di model sudah benar)
         $data['soal'] = $this->Soal_model->get_soal_dan_opsi();
 
         $this->load->view('template-mahasiswa/header', $data);
@@ -32,18 +31,23 @@ class Kuesioner extends CI_Controller {
             redirect('auth/login');
         }
 
-        // Simpan jawaban ke database
-        foreach ($jawaban as $id_soal => $nilai) {
+        // Simpan jawaban ke database, ambil nilai dari tabel opsi berdasarkan id_opsi
+        foreach ($jawaban as $id_soal => $id_opsi) {
+            // Ambil nilai opsi dari database
+            $opsi = $this->db->get_where('opsi', ['id_opsi' => $id_opsi])->row();
+            $nilai = $opsi ? $opsi->nilai : 0; // default 0 kalau gak ditemukan
+
             $data = [
                 'id_soal' => $id_soal,
-                'nilai' => $nilai,
+                'id_opsi' => $id_opsi,
+                'nilai'   => $nilai,
                 'id_user' => $id_user,
                 'created_at' => date('Y-m-d H:i:s')
             ];
             $this->db->insert('jawaban_user', $data);
         }
 
-        // Redirect ke halaman hasil setelah submit
+        $this->session->set_flashdata('success', 'Jawaban berhasil disimpan.');
         redirect('hasil');
     }
 }

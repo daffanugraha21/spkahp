@@ -6,6 +6,11 @@ class Kursus_model extends CI_Model {
     return $this->db->get('kursus')->result();
   }
 
+    public function get_all_kursus() {
+      return $this->db->get('kursus')->result();
+  }
+
+
   // Tambah data baru ke tabel kursus
   public function insert() {
     $data = [

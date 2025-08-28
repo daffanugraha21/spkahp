@@ -76,5 +76,13 @@ class Hasil extends CI_Controller {
         $this->load->view('template-mahasiswa/sidebar');
         $this->load->view('hasil', $data);
         $this->load->view('template-mahasiswa/footer');
+
+        // echo '<pre>Jawaban User: ';
+        // print_r($jawaban);
+        // echo "Bobot Kursus:\n";
+        // print_r($bobot_kursus);
+        // echo "Skor Kursus:\n";
+        // print_r($skor_kursus);
+        // exit;
     }
 }

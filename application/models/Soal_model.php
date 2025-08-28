@@ -54,4 +54,19 @@ class Soal_model extends CI_Model {
 
         return $soal_data; // array objek dengan nested opsi
     }
+
+    public function get_mapping_soal_to_kursus() {
+        $this->db->select('id_soal, id_kursus');
+        $result = $this->db->get('soal')->result();
+
+        $mapping = [];
+        foreach ($result as $row) {
+            if (!empty($row->id_kursus)) {
+                $mapping[$row->id_soal] = $row->id_kursus;
+            }
+        }
+        // var_dump($mapping);
+        // exit;
+        return $mapping;
+    }
 }
