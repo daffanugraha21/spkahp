@@ -4,28 +4,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Jawaban_model extends CI_Model {
 
     /**
-     * Mengambil jawaban lengkap dengan join ke tabel soal dan opsi,
-     * berdasarkan id_user.
-     * Mengembalikan array objek jawaban dengan detail pertanyaan, opsi,
-     * nilai, dan tanggal dibuat.
+     * Mengambil semua soal beserta jawaban user (jika ada),
+     * lengkap dengan opsi, nilai, dan tanggal dibuat.
+     * Jika user belum menjawab, tetap ditampilkan.
      * 
      * @param int $id_user
      * @return array
      */
     public function get_jawaban_detail_by_user($id_user) {
         $this->db->select('
-            ju.id_soal,
+            s.id_soal,
             s.pertanyaan,
             ju.id_opsi,
-            o.teks_opsi as jawaban_text,
+            o.teks_opsi AS jawaban_text,
             ju.nilai,
             ju.created_at
         ');
-        $this->db->from('jawaban_user ju');
-        $this->db->join('soal s', 'ju.id_soal = s.id_soal');
-        $this->db->join('opsi o', 'ju.id_opsi = o.id_opsi', 'left'); // opsi bisa jadi opsional
-        $this->db->where('ju.id_user', $id_user);
-        $this->db->order_by('ju.created_at', 'DESC');
+        $this->db->from('soal s');
+        $this->db->join('jawaban_user ju', 's.id_soal = ju.id_soal AND ju.id_user = ' . $this->db->escape($id_user), 'left');
+        $this->db->join('opsi o', 'ju.id_opsi = o.id_opsi', 'left');
+        $this->db->order_by('s.id_soal', 'ASC');
 
         return $this->db->get()->result();
     }

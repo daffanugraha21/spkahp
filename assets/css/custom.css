@@ -17,23 +17,6 @@
 }
 
 /* v2 */
-.carousel-caption h1 {
-	background: linear-gradient(
-		to right,
-		rgba(128, 0, 128, 0.3),
-		rgba(128, 0, 128, 0.6)
-	);
-	border-radius: 12px;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-	color: white;
-	padding: 0.5rem 1rem;
-	border-radius: 5px;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	-ms-border-radius: 12px;
-	-o-border-radius: 12px;
-}
-
 .container-fluid {
 	display: flex;
 	justify-content: center;

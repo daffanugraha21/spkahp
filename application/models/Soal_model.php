@@ -42,18 +42,22 @@ class Soal_model extends CI_Model {
         return $this->db->limit($limit, $start)->get('soal')->result();
     }
 
-    public function get_soal_dan_opsi() {
-        $this->db->order_by('id_soal', 'ASC');
-        $soal_data = $this->db->get('soal')->result();
-
-        foreach ($soal_data as $soal) {
-            $this->db->where('soal_id', $soal->id_soal);
-            $this->db->order_by('id_opsi', 'ASC');
-            $soal->opsi = $this->db->get('opsi')->result(); // properti opsi sebagai array objek
-        }
-
-        return $soal_data; // array objek dengan nested opsi
+public function get_soal_dan_opsi($limit = null, $offset = null) {
+    $this->db->select('*');
+    $this->db->from('soal');
+    if ($limit) {
+        $this->db->limit($limit, $offset);
     }
+    $query = $this->db->get();
+    $soal = $query->result();
+
+    // Ambil opsi tiap soal
+    foreach ($soal as &$s) {
+        $s->opsi = $this->db->get_where('opsi', ['soal_id' => $s->id_soal])->result();
+    }
+
+    return $soal;
+}
 
     public function get_mapping_soal_to_kursus() {
         $this->db->select('id_soal, id_kursus');
@@ -68,5 +72,20 @@ class Soal_model extends CI_Model {
         // var_dump($mapping);
         // exit;
         return $mapping;
+    }
+
+    public function get_mapping_soal_to_kriteria_kursus() {
+        // pastikan kolom 'id_kriteria' ada di tabel 'soal'
+        $this->db->select('id_soal, id_kriteria, id_kursus');
+        $rows = $this->db->get('soal')->result();
+
+        $map = [];
+        foreach ($rows as $r) {
+            $map[$r->id_soal] = [
+                'id_kriteria' => (int)$r->id_kriteria,
+                'id_kursus'   => (int)$r->id_kursus
+            ];
+        }
+        return $map;
     }
 }

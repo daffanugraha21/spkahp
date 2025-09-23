@@ -39,12 +39,12 @@
             <p>Kriteria AHP</p>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="<?= site_url('subkriteria'); ?>" class="nav-link">
             <i class="nav-icon fas fa-clipboard-check"></i>
             <p>Sub Kriteria AHP</p>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="<?= site_url('kursus'); ?>" class="nav-link">
             <i class="nav-icon fas fa-keyboard"></i>
@@ -57,12 +57,12 @@
             <p>Soal Kuesioner</p>
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a href="<?= site_url('hasilkuesioner'); ?>" class="nav-link">
             <i class="nav-icon fas fa-clipboard-check"></i>
             <p>Hasil</p>
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a href="<?= site_url('admin/logout'); ?>" class="nav-link logout-link">
             <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -4,6 +4,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/custom.css') ?>">
     <title>Beranda</title>
+
+    <style>
+    .carousel-caption {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 65%;
+    }
+
+    .carousel-caption h1 {
+      background: rgba(123, 44, 191, 0.5); /* ungu semi transparan */
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    </style>
 </head>
 <body>
   <!-- Navbar section -->

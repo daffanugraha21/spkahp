@@ -5,25 +5,44 @@ class User_model extends CI_Model {
 
     public function __construct()
     {
-        parent::__construct(); // Panggil constructor CI_Model
-        $this->load->database(); // Load database supaya $this->db bisa dipakai
+        parent::__construct();
+        $this->load->database();
     }
 
-    // Fungsi untuk menyimpan data user baru ke database
+    // CREATE
     public function insert($data)
     {
         return $this->db->insert('users', $data);
     }
 
-    // Fungsi untuk mencari user berdasarkan NPM
+    // READ by NPM
     public function get_by_npm($npm)
     {
         return $this->db->get_where('users', ['npm' => $npm])->row();
     }
 
-    // Fungsi untuk menampilkan semua data user
+    // READ all
     public function get_all_users()
     {
-        return $this->db->get('users')->result(); // Ambil semua data dari tabel 'users'
+        return $this->db->get('users')->result();
+    }
+
+    // READ by ID (buat edit / delete)
+    public function get_by_id($id)
+    {
+        return $this->db->get_where('users', ['id' => $id])->row();
+    }
+
+    // UPDATE
+    public function update($id, $data)
+    {
+        $this->db->where('id', $id);
+        return $this->db->update('users', $data);
+    }
+
+    // DELETE
+    public function delete($id)
+    {
+        return $this->db->delete('users', ['id' => $id]);
     }
 }

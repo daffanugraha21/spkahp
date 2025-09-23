@@ -121,12 +121,12 @@
   <div class="container">
     <h1 class="text-center mb-4">Dashboard Admin</h1>
     <div class="info-cards">
-  <div class="card card-info">
+  <!-- <div class="card card-info">
     <div class="card-body">
       <h1>100</h1>
       <p class="card-text">Jumlah Users</p>
     </div>
-  </div>
+  </div> -->
 
   <div class="card card-info">
     <div class="card-body">
@@ -142,12 +142,12 @@
     </div>
   </div>
 
-  <div class="card card-info">
+  <!-- <div class="card card-info">
     <div class="card-body">
       <h1>0</h1>
       <p class="card-text">Jumlah Pengunjung</p>
     </div>
-  </div>
+  </div> -->
 </div>
 
 
